@@ -206,6 +206,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": "products",
 						"fileSystem": "output1"
 					},
 					"columnDelimiter": ",",
@@ -363,6 +364,16 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Validation1",
+						"type": "Validation",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"timeout": "0.12:00:00",
+							"sleep": 10
+						}
 					}
 				],
 				"policy": {
