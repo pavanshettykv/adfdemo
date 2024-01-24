@@ -94,32 +94,7 @@
 					"firstRowAsHeader": false,
 					"quoteChar": "\""
 				},
-				"schema": [
-					{
-						"name": "1",
-						"type": "String"
-					},
-					{
-						"name": "2",
-						"type": "String"
-					},
-					{
-						"name": "Quest Q64 10 FT. x 10 FT. Slant Leg Instant U",
-						"type": "String"
-					},
-					{
-						"name": "Prop_3",
-						"type": "String"
-					},
-					{
-						"name": "59.98",
-						"type": "String"
-					},
-					{
-						"name": "http://images.acmesports.sports/Quest+Q64+10+FT.+x+10+FT.+Slant+Leg+Instant+Up+Canopy",
-						"type": "String"
-					}
-				]
+				"schema": []
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ls_AzureBlobStorage')]"
@@ -149,19 +124,15 @@
 				},
 				"schema": [
 					{
-						"name": "order_id",
 						"type": "String"
 					},
 					{
-						"name": "order_date",
 						"type": "String"
 					},
 					{
-						"name": "order_customer_id",
 						"type": "String"
 					},
 					{
-						"name": "order_status",
 						"type": "String"
 					}
 				]
