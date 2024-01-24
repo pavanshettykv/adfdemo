@@ -70,6 +70,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": "orders",
 						"fileSystem": "output"
 					},
 					"columnDelimiter": ",",
