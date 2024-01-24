@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdemo1999"
+		},
+		"ls_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://adfdl.dfs.core.windows.net/"
+		},
+		"ls_Http_connector_properties_typeProperties_url": {
+			"value": "https://files.cdn.thinkific.com"
+		}
+	}
+}
