@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfdemo1999"
 		},
+		"ls_AzureBlobStorage_connectionString": {
+			"value": ""
+		},
 		"ls_AzureDataLakeStorage_accountKey": {
 			"value": ""
 		},

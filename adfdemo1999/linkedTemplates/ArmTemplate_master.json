@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdemo1999"
 		},
+		"ls_AzureBlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_AzureBlobStorage'"
+		},
 		"ls_AzureDataLakeStorage_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_AzureDataLakeStorage'"
@@ -45,6 +49,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_AzureBlobStorage_connectionString": {
+						"value": "[parameters('ls_AzureBlobStorage_connectionString')]"
 					},
 					"ls_AzureDataLakeStorage_accountKey": {
 						"value": "[parameters('ls_AzureDataLakeStorage_accountKey')]"
