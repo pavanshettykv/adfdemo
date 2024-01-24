@@ -1,0 +1,19 @@
+{
+	"name": "ds_result_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "orders",
+				"fileSystem": "result"
+			}
+		},
+		"schema": {}
+	}
+}

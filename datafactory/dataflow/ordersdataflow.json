@@ -1,0 +1,62 @@
+{
+	"name": "ordersdataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_dl_sink",
+						"type": "DatasetReference"
+					},
+					"name": "sourcedl"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_result_json",
+						"type": "DatasetReference"
+					},
+					"name": "sinkdl"
+				}
+			],
+			"transformations": [
+				{
+					"name": "selectorders"
+				},
+				{
+					"name": "aggregateorders"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          order_id as string,",
+				"          order_date as string,",
+				"          order_customer_id as string,",
+				"          order_status as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> sourcedl",
+				"sourcedl select(mapColumn(",
+				"          order_id,",
+				"          customer_id = order_customer_id,",
+				"          order_status",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> selectorders",
+				"selectorders aggregate(groupBy(order_status),",
+				"     count = count(order_id)) ~> aggregateorders",
+				"aggregateorders sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sinkdl"
+			]
+		}
+	}
+}
