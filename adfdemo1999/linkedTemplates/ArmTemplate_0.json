@@ -306,7 +306,14 @@
 					{
 						"name": "Copy products data",
 						"type": "Copy",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Validate file",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -366,12 +373,17 @@
 						]
 					},
 					{
-						"name": "Validation1",
+						"name": "Validate file",
 						"type": "Validation",
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"timeout": "0.12:00:00",
+							"dataset": {
+								"referenceName": "ds_blob_source",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"timeout": "0.00:00:30",
 							"sleep": 10
 						}
 					}
