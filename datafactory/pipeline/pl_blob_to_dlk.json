@@ -45,6 +45,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -65,6 +66,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@activity('Copy products data').output",
+						"type": "Expression"
+					},
 					"ifFalseActivities": [
 						{
 							"name": "Fail1",
