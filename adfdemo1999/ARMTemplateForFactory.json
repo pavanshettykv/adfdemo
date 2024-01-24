@@ -145,7 +145,7 @@
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
 									"quoteAllText": true,
-									"fileExtension": ".txt"
+									"fileExtension": ".csv"
 								}
 							},
 							"enableStaging": false,
@@ -167,7 +167,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "ds_dl_sink",
+								"referenceName": "ds_sink_dlk",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -181,7 +181,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_blob_source')]",
-				"[concat(variables('factoryId'), '/datasets/ds_dl_sink')]"
+				"[concat(variables('factoryId'), '/datasets/ds_sink_dlk')]"
 			]
 		},
 		{
