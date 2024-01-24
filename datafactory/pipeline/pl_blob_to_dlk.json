@@ -167,6 +167,12 @@
 									"referenceName": "ds_blob_source",
 									"type": "DatasetReference"
 								},
+								"logStorageSettings": {
+									"linkedServiceName": {
+										"referenceName": "ls_AzureBlobStorage",
+										"type": "LinkedServiceReference"
+									}
+								},
 								"enableLogging": true,
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
