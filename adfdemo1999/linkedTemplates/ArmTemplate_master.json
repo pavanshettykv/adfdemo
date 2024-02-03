@@ -7,21 +7,21 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdemo1999"
 		},
-		"ls_AzureBlobStorage_connectionString": {
+		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ls_AzureBlobStorage'"
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
-		"ls_AzureDataLakeStorage_accountKey": {
+		"ls_AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_AzureDataLakeStorage'"
+			"metadata": "Secure string for 'accountKey' of 'ls_AzureDataLakeStorage1'"
 		},
-		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://adfdl.dfs.core.windows.net/"
+		"ls_lookup_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_lookup'"
 		},
-		"ls_Http_connector_properties_typeProperties_url": {
+		"ls_AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://files.cdn.thinkific.com"
+			"defaultValue": "https://dlkaccount.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -50,17 +50,17 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ls_AzureBlobStorage_connectionString": {
-						"value": "[parameters('ls_AzureBlobStorage_connectionString')]"
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
-					"ls_AzureDataLakeStorage_accountKey": {
-						"value": "[parameters('ls_AzureDataLakeStorage_accountKey')]"
+					"ls_AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('ls_AzureDataLakeStorage1_accountKey')]"
 					},
-					"ls_AzureDataLakeStorage_properties_typeProperties_url": {
-						"value": "[parameters('ls_AzureDataLakeStorage_properties_typeProperties_url')]"
+					"ls_lookup_connectionString": {
+						"value": "[parameters('ls_lookup_connectionString')]"
 					},
-					"ls_Http_connector_properties_typeProperties_url": {
-						"value": "[parameters('ls_Http_connector_properties_typeProperties_url')]"
+					"ls_AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('ls_AzureDataLakeStorage1_properties_typeProperties_url')]"
 					}
 				}
 			},

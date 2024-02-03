@@ -5,17 +5,17 @@
 		"factoryName": {
 			"value": "adfdemo1999"
 		},
-		"ls_AzureBlobStorage_connectionString": {
+		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
-		"ls_AzureDataLakeStorage_accountKey": {
+		"ls_AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
-		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
-			"value": "https://adfdl.dfs.core.windows.net/"
+		"ls_lookup_connectionString": {
+			"value": ""
 		},
-		"ls_Http_connector_properties_typeProperties_url": {
-			"value": "https://files.cdn.thinkific.com"
+		"ls_AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://dlkaccount.dfs.core.windows.net/"
 		}
 	}
 }
